@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Círculo</title>
+    <link rel="stylesheet" href="/assets/css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Círculo</h1>
+    </header>
+
+    <main>
+        <p> Um círculo é uma figura geométrica plana composta por todos os pontos que estão a uma distância igual ou inferior a um determinado raio de um determinado centro. O raio é a distância do centro do círculo a qualquer ponto da circunferência.</p>
+
+        <p>Fórmula para calcular a área do círculo:  <code>&pi; * (r ^ 2)</code></p>
+
+        <form id="calc-form">
+            <div>
+                <label for="raio">Raio (r):</label>
+                <input type="number" id="raio" required>
+            </div>
+
+            <div>
+                <button type="button" id="calcular-btn" onclick="calcularCirculo()">Calcular Círculo</button>
+            </div>
+
+            <div>
+                <label for="resultado"><br>Círculo: <br></label>
+                <!-- <input id="resultado" >-->
+                <span id="resultado" >Resultado</span>
+            </div>
+        </form>
+    </main>
+
+    <script src="/assets/js/scripts.js">
+    </script>
+</body>
+</html>
