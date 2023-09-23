@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Área do Tronco de Pirâmide</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/estilos.css">
 </head>
 <body>
     <header>
@@ -33,37 +33,17 @@
             </div>
 
             <div>
-                <button type="button" id="calcular-btn" onclick="calcularArea()">Calcular Área</button>
+                <button type="button" id="calcular-btn" onclick="calcularTroncodaPiramide()">Calcular Área</button>
             </div>
 
             <div>
                 <label for="resultado">Área do Tronco de Pirâmide:</label>
                 <!-- <input id="resultado" >-->
-                <span id="resultado" >Exemplo</span>
+                <span id="resultado" ></span>
+                <div class="voltar-inicio">
+                    <a href="index.html"><p><br>Voltar a página inicial</p></a> 
+                 </div>
+                <script src="/assets/js/scripts.js"></script>
             </div>
         </form>
     </main>
-
-    <script>
-        function calcularArea() {
-
-            
-            // Obtenha os valores inseridos pelo usuário
-            // Métodos e propriedades
-            // getElementById seleciona o elemento com base no ID. 
-            // Também existe o querySelector
-            var raioMaior = parseFloat(document.getElementById('raioMaior').value); //20.0
-            var raioMenor = parseFloat(document.getElementById('raioMenor').value);
-            var altura = parseFloat(document.getElementById('altura').value);
-
-            // Calcule a área do tronco de pirâmide
-            // Podemos utilizar a biblioteca Math do javascript
-            var area = Math.PI * (raioMaior + raioMenor) * (raioMaior - raioMenor + Math.sqrt(Math.pow(altura, 2) + Math.pow(raioMaior - raioMenor, 2)));
-            
-            // Exiba o resultado na página
-            document.getElementById('resultado').textContent = area.toFixed(2);
-            // toFixed limita o valor a "x" casas após a virgúlas.  
-        }
-    </script>
-</body>
-</html>

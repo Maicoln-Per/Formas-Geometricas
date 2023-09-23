@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador a Coroa do Circulo</title>
+    <link rel="stylesheet" href="/assets/css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Calculador a Coroa do Circulo</h1>
+    </header>
+
+    <main>
+        <p>Uma coroa de círculo é uma figura geométrica plana que consiste em uma região entre dois círculos concêntricos. A coroa de círculo é formada pela remoção de um círculo menor de dentro de um círculo maior.</p>
+
+        <p>A fórmula para calcular a área da coroa de círculo depende dos raios dos círculos maior e menor. Se denotarmos o raio do círculo maior como "R" e o raio do círculo menor como "r", então a fórmula para calcular a área é:  <code>Área da Coroa de Círculo = π * (R^2 - r^2)</code></p>
+
+        <form id="calc-form">
+            <div>
+                <label for="raioMaior">Raio Maior(R) :</label>
+                <input type="number" id="raioMaior" required>
+            </div>
+
+            <div>
+                <label for="raioMenor">Raio Menor(r) :</label>
+                <input type="number" id="raioMenor" required>
+            </div>
+
+            <div>
+                <button type="button" id="calcular-btn" onclick="calcularCoroaDoCirculo()">Calcular Círculo</button>
+            </div>
+
+            <div>
+                <label for="resultado"><br>Coroa do Círculo: <br></label>
+                <!-- <input id="resultado" >-->
+                <span id="resultado" ></span>
+                <div class="voltar-inicio">
+                   <a href="index.html"><p><br>Voltar a página inicial</p></a> 
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script src="/assets/js/scripts.js">
+    </script>
+</body>
+</html>

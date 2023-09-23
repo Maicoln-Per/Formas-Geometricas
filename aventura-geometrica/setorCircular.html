@@ -1,69 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Área do Tronco de Pirâmide</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Calcular Setor Circular</title>
+    <link rel="stylesheet" href="/assets/css/estilos.css">
 </head>
 <body>
     <header>
-        <h1>Calculadora de Área do Tronco de Pirâmide</h1>
+        <h1>Calcular Setor Circular</h1>
     </header>
 
     <main>
-        <p>Um tronco de pirâmide é uma figura tridimensional que resulta da remoção de uma pirâmide menor (geralmente similar à pirâmide maior) de dentro de uma pirâmide maior. A fórmula para calcular a área do tronco de pirâmide é:</p>
+        <p>Um setor circular é uma parte de um círculo delimitada por dois raios e um arco. O arco é uma porção da circunferência do círculo, enquanto os dois raios são os segmentos que conectam o centro do círculo aos pontos finais do arco.</p>
 
-        <p>Fórmula para calcular a área = <code>&pi; * (R + r) * (R - r + &radic;(h^2 + (R - r)^2))</code></p>
+        <p>A fórmula para calcular a área de um setor circular depende do ângulo central do setor, denotado por "θ", e do raio do círculo, denotado por "r". A fórmula é dada por: Área do Setor Circular = <code>(θ/360) * π * r^2</code></p>
 
         <form id="calc-form">
             <div>
-                <label for="raioMaior">Raio Maior (R):</label>
-                <input type="number" id="raioMaior" required>
+                <label for="anguloCentral">Ângulo central do setor :</label>
+                <input type="number" id="anguloCentral" required>
             </div>
 
             <div>
-                <label for="raioMenor">Raio Menor (r):</label>
-                <input type="number" id="raioMenor" required>
+                <label for="raio">Raio :</label>
+                <input type="number" id="raio" required>
+            </div>
+            
+            <div>
+                <button type="button" id="calcular-btn" onclick="calcularSetorCircular()">Calcular Área</button>
             </div>
 
             <div>
-                <label for="altura">Altura (h):</label>
-                <input type="number" id="altura" required>
-            </div>
-
-            <div>
-                <button type="button" id="calcular-btn" onclick="calcularArea()">Calcular Área</button>
-            </div>
-
-            <div>
-                <label for="resultado">Área do Tronco de Pirâmide:</label>
+                <label for="resultado">Área do Setor Circular:</label>
                 <!-- <input id="resultado" >-->
-                <span id="resultado" >Exemplo</span>
+                <span id="resultado" ></span>
+                <div class="voltar-inicio">
+                    <a href="index.html"><p><br>Voltar a página inicial</p></a> 
+                 </div>
             </div>
         </form>
     </main>
 
-    <script>
-        function calcularArea() {
-
-            
-            // Obtenha os valores inseridos pelo usuário
-            // Métodos e propriedades
-            // getElementById seleciona o elemento com base no ID. 
-            // Também existe o querySelector
-            var raioMaior = parseFloat(document.getElementById('raioMaior').value); //20.0
-            var raioMenor = parseFloat(document.getElementById('raioMenor').value);
-            var altura = parseFloat(document.getElementById('altura').value);
-
-            // Calcule a área do tronco de pirâmide
-            // Podemos utilizar a biblioteca Math do javascript
-            var area = Math.PI * (raioMaior + raioMenor) * (raioMaior - raioMenor + Math.sqrt(Math.pow(altura, 2) + Math.pow(raioMaior - raioMenor, 2)));
-            
-            // Exiba o resultado na página
-            document.getElementById('resultado').textContent = area.toFixed(2);
-            // toFixed limita o valor a "x" casas após a virgúlas.  
-        }
-    </script>
+    <script src="/assets/js/scripts.js"></script>
 </body>
 </html>
