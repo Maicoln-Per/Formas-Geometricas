@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Polígono Regular com N Lados</title>
+    <link rel="stylesheet" href="/assets/css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Polígono Regular com N Lados</h1>
+    </header>
+
+    <main>
+        <p> Um polígono regular com N lados é um polígono convexo no qual todos os lados têm o mesmo comprimento e todos os ângulos internos têm o mesmo ângulo.</p>
+
+        <p>Fórmula para calcular o Polígono Regular com N Lados:  <code>  S  * L²/2</code></p>
+
+        <form id="calc-form">
+            <div>
+                <label for="lados">Número de Lados (n):</label>
+                <input type="number" id="lados" required>
+            </div>
+
+            <div>
+                <label for="comprimento">Comprimento de um Lado (l):</label>
+                <input type="number" id="comprimento" required>
+            </div>
+
+            <div>
+                <button type="button" id="calcular-btn" onclick="calcularPoligono()">Calcular Polígono Regular</button>
+            </div>
+
+            <div>
+                <label for="resultado"><br>Polígono Regular com N Lados: <br></label>
+                <!-- <input id="resultado" >-->
+                <span id="resultado" ><br></span>
+                <div class="voltar-inicio">
+                    <a href="index.html"><p><br>Voltar a página inicial</p></a> 
+                 </div>
+            </div>
+        </form>
+    </main>
+
+    <script src="/assets/js/scripts.js"></script>
+</body>
+</html>
